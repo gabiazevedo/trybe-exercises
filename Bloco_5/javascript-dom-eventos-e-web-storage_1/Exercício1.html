@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.1</title>
+
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
+    <div class="main-content">
+      <div class="center-content">
+        <p>Texto padrão do nosso site</p>
+        <p>-----</p>
+        <p>Trybe</p>
+      </div>
+    </div>
+    <script>
+      
+      function changeText() {
+      let paragraph = document.getElementsByTagName('p');
+        paragraph[0].innerText = 'Daqui a dois anos, me vejo mudando de DEV Junior para Pleno - Nível 1';
+      }
+      changeText();
+
+      function changeColorYellowSquare() {
+      let mainContent = document.getElementsByClassName('main-content');
+        mainContent[0].style = 'background-color: rgb(76, 164, 109)';
+      }
+      changeColorYellowSquare();
+
+      function changeColorRedSquare() {
+      let centerContent = document.getElementsByClassName('center-content');
+        centerContent[0].style = 'background-color: white';
+      }
+      changeColorRedSquare();
+
+      function fixTitle() {
+      let title = document.getElementsByTagName('h1');
+        title[0].innerText = "Exercício 5.1 - JavaScript"; 
+      }
+      fixTitle();
+    
+      function toUpperCase() {
+      let paragraph = document.getElementsByTagName('p');
+      paragraph[0].innerText = paragraph[0].innerText.toUpperCase();
+      } 
+      toUpperCase();
+
+      function showParagraps() {
+        let paragraph = document.getElementsByTagName('p');
+        for (let index = 0; index < paragraph.length; index += 1);
+        console.log(document.getElementsByTagName('p'));
+      }
+      showParagraps();
+
+    </script>
+  </body>
+</html>

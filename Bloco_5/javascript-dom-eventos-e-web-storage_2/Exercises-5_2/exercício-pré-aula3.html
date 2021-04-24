@@ -1,0 +1,105 @@
+<div id="paiDoPai">
+    <div id="pai">
+      <div id="primeiroFilho"></div>
+      <div id="elementoOndeVoceEsta">
+        <div id="primeiroFilhoDoFilho"></div>
+        <div id="segundoEUltimoFilhoDoFilho"></div>
+      </div>
+      Atenção!
+      <div id="terceiroFilho"></div>
+      <div id="quartoEUltimoFilho"></div>
+    </div>
+  </div>
+
+<script>
+
+//Acesse o elemento elementoOndeVoceEsta.
+
+console.log(document.getElementById('elementoOndeVoceEsta'));
+
+//Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+
+console.log(document.getElementById('elementoOndeVoceEsta').parentElement);
+let changeColorDad = document.getElementById('pai');
+    changeColorDad.style = 'color: green';
+    
+//Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
+
+console.log(document.getElementById('elementoOndeVoceEsta').firstElementChild);
+let firstSonOfSon = document.getElementById('primeiroFilhoDoFilho');
+    firstSonOfSon.innerText = 'Manipulando elementos HTML usando JavaScript, DáHORA!!!'
+
+//Acesse o primeiroFilho a partir de pai.
+
+console.log(document.getElementById('pai').firstElementChild);
+
+//Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta.
+
+console.log(document.getElementById('elementoOndeVoceEsta').previousElementSibling);
+
+//Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
+
+console.log(document.getElementById('elementoOndeVoceEsta').nextSibling);
+
+//Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
+
+console.log(document.getElementById('elementoOndeVoceEsta').nextElementSibling);
+
+//Agora acesse o terceiroFilho a partir de pai.
+
+console.log(document.getElementById('pai').lastElementChild.previousElementSibling);
+
+//Crie um irmão para elementoOndeVoceEsta.
+
+//não entendi como fazer
+
+//Crie um filho para elementoOndeVoceEsta.
+
+console.log(document.getElementById('elementoOndeVoceEsta').parentElement);
+
+let son = document.getElementById('elementoOndeVoceEsta');
+let sonElementoOndeVoceEsta = document.createElement('div');
+    sonElementoOndeVoceEsta.innerText = 'Um filho para elementoOndeVoceEsta.'
+    sonElementoOndeVoceEsta.id = 'terceiroFilhoDoFilho';
+    son.appendChild(sonElementoOndeVoceEsta);
+
+console.log(document.getElementById('elementoOndeVoceEsta').children);
+
+//Crie um filho para primeiroFilhoDoFilho.
+
+console.log(document.getElementById('primeiroFilhoDoFilho'));
+
+let sonOfSon1 = document.getElementById('primeiroFilhoDoFilho');
+let sonOfSon = document.createElement('p');
+    sonOfSon.innerText = 'Criando um filho para primeiroFilhoDoFilho.'
+    sonOfSon.id = 'filhoDoPrimeiroFilhoDoFilho';
+    sonOfSon1.appendChild(sonOfSon);
+
+//A partir desse filho criado, acesse terceiroFilho. 
+//não entendi como fazer, cheguei até onde deu.
+
+console.log(document.getElementById('filhoDoPrimeiroFilhoDoFilho').parentElement.nextElementSibling.nextElementSibling);
+
+//Remova todos os elementos da página, menos pai, elementoOndeVoceEsta e primeiroFilhoDoFilho.
+
+console.log(document.getElementById('primeiroFilho').parentNode);
+
+let pai = document.getElementById('pai');
+let primeiroFilho = document.getElementById('primeiroFilho');
+pai.removeChild(primeiroFilho);
+
+let pai1 = document.getElementById('elementoOndeVoceEsta');
+let removeSon1 = document.getElementById('segundoEUltimoFilhoDoFilho');
+pai1.removeChild(removeSon1);
+
+let pai2 = document.getElementById('pai');
+let removeSon2 = document.getElementById('terceiroFilho');
+pai2.removeChild(removeSon2);
+
+let pai3 = document.getElementById('pai');
+let removeSon3 = document.getElementById('quartoEUltimoFilho');
+pai3.removeChild(removeSon3);
+
+console.log(document.getElementById('pai').parentNode);
+
+</script>

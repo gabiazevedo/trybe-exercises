@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulário-Currículo</title>
+<link rel="stylesheet" href="bulma.min.css">
+<link rel="stylesheet" href="form-style.css">
+
+<body>
+<header id="header" class="section has-text-centered has-background-info-light hsl(206, 70%, 96%)">
+<h1 id class="subtitle is-1 has-text-info">Formulário para cadastro de currículos</h1>
+<h3 class="subtitle is-3 has-text-success hsl(141, 71%, 48%)">Preencha os campos abaixo</h3>
+</header>
+
+<section id="form-container" class="section">
+<form id="form" method="GET">
+
+    <div class="field">
+      <h1 class="subtitle is-4">Dados Pessoais</h1>
+    <label class="label" for="name">Nome Completo</label>
+    <div class="control">
+    <input class="input" type="name" name="nome" id="name" maxlength="40" required>
+    </div>
+    </div>
+
+    <div class="field">
+    <label class="label" for="e-mail">E-mail</label>
+    <div class="control">
+    <input class="input" type="e-mail" name="e-mail" id="e-mail" maxlength="50" required>
+    </div>
+    </div>
+    
+    <div class="field">
+    <label class="label" for="cpf">CPF</label>
+    <div class="control">
+    <input class="input" type="text" name="cpf" id="cpf-number" maxlength="11" required>
+    </div>
+    </div>
+
+    <div class="field">
+    <label class="label" for="address">Endereço</label>
+    <div class="control">
+    <input class="input" type="text" name="address" id="address" maxlength="200" required>
+    </div>
+    </div>
+    
+    <div class="field">
+    <label class="label" for="city">Cidade</label>
+    <div class="control">
+    <input class="input" type="text" name="city" id="city" maxlength="28" required>
+    </div>
+    </div>
+
+  <div class="field">
+    <label class="label" for="state">Estado</label>
+    <div class="control">
+      <div class="select">
+        <select name="state" id="state" required></select>                      
+      </div>
+    </div>
+  </div>
+
+     <div class="field">
+    <label class="label">Tipo de imóvel</label>
+    <div class="control">
+      <label class="radio">
+    <input type="radio" id="house" name="house-apartment" value="house" required>Casa
+      </label>
+
+      <label class="radio">
+    <input type="radio" id="apartment" name="house-apartment" value="apartment" required>Apartamento 
+      </label>  
+    </div>
+    <br>
+
+    <div class="field">     
+    <h1 class="subtitle is-4">Dados do seu último emprego</h1>
+    <label class="label" for="resume">Resumo do Currículo</label>
+    <div class="control">
+    <textarea class="textarea" id="resume" name="resume" maxlength="1000" cols="100" rows="20" required></textarea>
+    </div>
+    </div>
+
+    <div class="field">
+    <label class="label" for="position">Cargo</label>
+    <div class="control">
+    <input class="input" type="text" name="postion" id="position" maxlength="40" required>   
+    </div>
+    </div>
+
+    <div class="field">
+    <label class="label" for="description">Descrição do Cargo</label>
+    <div class="control">
+    <input class="input" type="text" name="description" id="description" maxlength="500" required>
+    </div>
+    </div>
+
+    <div class="field">
+    <label class="label" for="date">Data de Início</label>
+    <div class="control">
+    <input class="input" type="text" id="date" name="date" required>
+    </div>
+    </div>
+
+<div class="field is-grouped" id="buttons">
+  <div class="control">
+<button class="button is-info is-focused" type="submit" id="submit">Enviar</button>
+<button class="button is-success is-focused" type="reset" id="reset">Limpar</button>
+</div>
+</div>
+
+</form>
+</section>
+
+<script src="form-bulma.js"></script>
+</body>
+</html>

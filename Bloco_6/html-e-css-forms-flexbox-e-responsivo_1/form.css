@@ -1,0 +1,38 @@
+.cabecalho {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 300px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.cabecalho h1 {
+  margin-bottom: 0px;
+}
+
+#form {
+  margin: 0px auto 0px auto;
+  width: 60%;
+}
+
+.fieldset1 {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.fieldset2 {
+  margin-top: 20px;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+}
+
+#buttons {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+#limpar {
+  margin: 15px 30px 15px 30px; 
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário-Currículo</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="cabecalho">
+  <h1>Formulário para cadastro de currículos</h1>
+  <h3>Preencha os campos abaixo</h3>
+</header>
+
+<form id="form" method="GET">
+  <div>
+    <fieldset class="fieldset1">
+      <legend>Dados Pessoais</legend>
+      <div>
+      <label for="name">Nome</label>
+      <input type="name" name="nome" id="name" maxlength="40" required>
+        </div>
+  
+      <div>
+        <label for="e-mail">Endereço de e-mail</label>
+        <input type="e-mail" name="e-mail" id="e-mail" maxlength="50" required>
+        </div>
+      
+      <div>
+        <label for="cpf">CPF</label>
+        <input type="text" name="cpf" id="cpf-number" maxlength="11" required>
+        </div>
+      
+      <div>
+        <label for="address">Endereço</label>
+        <input type="text" name="address" id="address" maxlength="200" required>
+        </div>
+      
+      <div>
+        <label for="city">Cidade</label>
+        <input type="text" name="city" id="city" maxlength="28" required>
+        </div>
+      
+      <div>
+        <label for="state">Estado</label>
+        <select name="state" id="state" required></select>                      
+      </div>
+    
+      <div>
+        <label>Tipo de imóvel</label>
+        <input type="radio" id="house" name="house-apartment" value="house" required><span>Casa</span>
+        <input type="radio" id="apartment" name="house-apartment" value="apartment" required><span>Apartamento</span> 
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="fieldset2">
+    <fieldset>       
+      <legend>Dados do seu último emprego</legend>
+      <div>
+      <label for="resume">Resumo do Currículo</label>
+      <br>
+      <textarea id="resume" name="resume" maxlength="1000" cols="100" rows="20" required></textarea>
+      </div>
+
+      <div>
+      <label for="position">Cargo</label>
+      <input type="text" name="postion" id="position" maxlength="40" required>   
+      </div>
+
+      <div>
+        <label for="description">Descrição do Cargo</label>
+        <input type="text" name="description" id="description" maxlength="500" required>
+      </div>
+
+      <div>
+        <label for="date">Data de Início</label>
+        <input type="text" id="date" name="date" required>
+      </div>
+    </fieldset>
+  </div>
+
+  <div id="buttons">
+  <button type="submit" id="submit">Enviar</button>
+  <button type="reset" id="reset">Limpar</button>
+  </div>
+
+</form>
+<script src="form.js"></script>
+</body>
+</html>

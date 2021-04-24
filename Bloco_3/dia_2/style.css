@@ -1,0 +1,60 @@
+h1 {
+    color: orange;
+    font-size: 65px;
+    font-family: sans-serif;
+  }
+  
+  ul {
+    background-color: powderblue;
+  }
+
+  .p-and-list-style{
+    background-color: burlywood;
+    font-family: sans-serif;
+    font-style: italic;
+    
+  }
+  
+  body{
+    font-size: 16px;
+    background-color: cornsilk;
+  }
+
+  p {
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 3em;
+  }
+
+  #ul-style {
+    font-family: sans-serif;
+    font-style: italic;
+    line-height: 25px;
+    text-align: left;
+    text-decoration: underline;
+  }
+
+  #yellow {
+    background-color: yellow;
+  }
+
+  #red {
+    background-color: red;
+  }
+
+  #blue {
+    background-color: blue;
+  }
+
+  #black {
+    background-color: black;
+    color: white;
+  }
+
+  #coral {
+    background-color: orange;
+  }
+
+  #old-pink {
+    background-color: palevioletred;
+  }
