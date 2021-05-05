@@ -14,3 +14,5 @@ function greet (type, greetFormal, greetCasual) {
     }
     }
 greet('formal', formalGreeting, casualGreeting);
+
+// Alteração para commit de criação de pull request e merge com branch main SS
