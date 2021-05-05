@@ -1,3 +1,5 @@
+// Exercícios feitos em conjunto com Ana Giorgiani e ajuda do gabarito.
+
 function createAlgarisms(algarism) {
 
   const romano = {
