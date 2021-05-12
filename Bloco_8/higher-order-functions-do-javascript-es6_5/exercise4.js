@@ -32,9 +32,6 @@ const people = [
 // Escreva uma função filterPeople que, dada uma lista de pessoas, retorna todas as pessoas australianas que nasceram no século 20:
 // Dica: use object destructuring.
 
-const filteredPeople = filterPeople((people) => {
-  
-}
-
+const filterPeople = (peopleList) => peopleList.filter({ nationality, bornIn} === 'Australian')
 // assert.deepStrictEqual(filteredPeople[0], { name: 'Nicole', bornIn: 1992, nationality: 'Australian' });
 // assert.deepStrictEqual(filteredPeople[1], { name: 'Toby', bornIn: 1901, nationality: 'Australian' });
