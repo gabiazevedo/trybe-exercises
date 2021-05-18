@@ -1,5 +1,5 @@
 
-// const assert = require('assert');
+const assert = require('assert');
 
 const books = [
   {
@@ -67,9 +67,12 @@ const books = [
 // Crie uma string com os nomes de todas as pessoas autoras.
 
 function allNames() {
-    const strings = books.reduce((accu, nome) => {
-    
-    
-    }
-    
-// assert.deepStrictEqual(allNames(), 'Nomes: George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.');
+    let strings = books.reduce((acc, nome) => {
+    acc.push(nome.author.name);
+    return acc;
+    }, []);
+    strings = strings.join(', ');
+    return `Nomes: ${strings}.`
+  }
+
+assert.deepStrictEqual(allNames(), 'Nomes: George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.');

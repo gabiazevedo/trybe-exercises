@@ -1,4 +1,4 @@
-const assert = require('assert');
+// const assert = require('assert');
 
 const books = [
   {
@@ -72,4 +72,3 @@ function authorUnique() {
     return books.every((year) => year.author.birthYear !== year.author.birthYear);
 }
 console.log(authorUnique());
-assert.strictEqual(authorUnique(), expectedResult);
