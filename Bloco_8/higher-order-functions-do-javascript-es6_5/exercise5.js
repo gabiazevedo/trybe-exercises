@@ -7,13 +7,11 @@ const myList = [1, 2, 3];
 // Detalhe: você precisa fazer essa função gastando 1 linha só:
 // Dica: use array destructuring
 
-const swappedList = swap((myList) => {
-const [ mylist1, mylist2, mylist3 ] = myList;
-return mylist3, mylist2, mylist1;
-});
+const swap = ([ a, b, c]) => [c, b, a];
 
-console.log(swappedList());
+const swappedList = swap(myList);
 
-// assert.strictEqual(swappedList[0], 3);
-// assert.strictEqual(swappedList[1], 2);
-// assert.strictEqual(swappedList[2], 1);
+
+assert.strictEqual(swappedList[0], 3);
+assert.strictEqual(swappedList[1], 2);
+assert.strictEqual(swappedList[2], 1);

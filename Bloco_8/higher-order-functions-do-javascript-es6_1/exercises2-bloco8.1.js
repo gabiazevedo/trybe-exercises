@@ -26,12 +26,8 @@ const newEmployees = (callback) => {
 
 // Primeiro exercício HOF feito em dupla com a Ana Giorgiani sem ajuda do gabarito!!!! Nós duas fizemos juntas e deu certo!!!
 
-const gumble = (num, ramdomNum1) => {
-  if (num === ramdomNum1) {
-    console.log('Parabéns você ganhou!!!');
-  } else {
-    console.log('Tente novamente');
-}
+const gumble = (number, ramdomNum1) => {
+  console.log((number === ramdomNum1) ? 'Parabéns você ganhou!!!' : 'Tente novamente');
 }
 
 const result = (number, callback) => { 
