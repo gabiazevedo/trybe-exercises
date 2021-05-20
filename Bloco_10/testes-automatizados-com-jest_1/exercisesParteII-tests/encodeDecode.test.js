@@ -1,4 +1,3 @@
-const { expect } = require('@jest/globals');
 const { encode, decode } = require('../exercisesParteII/encodeDecode');
 
 describe('Testa a função encode e decode', () => {
