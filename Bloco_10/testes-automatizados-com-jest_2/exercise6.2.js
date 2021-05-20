@@ -7,7 +7,7 @@ const Animals = [
 const findAnimalByAge = (age) => (
   new Promise ((resolve, reject) => {
     const arrayAnimalsByAge = Animals.filter((animals) => animals.age === age);
-      if (arrayAnimalsByAge.lenght !== 0) {
+      if (arrayAnimalsByAge.length !== 0) {
         return resolve(arrayAnimalsByAge);
       }
       return reject('Nenhum animal com essa idade!');
