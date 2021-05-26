@@ -1,0 +1,17 @@
+.divMae {
+text-align: center;
+font-size: 50px;
+}
+
+.pokemon {
+display: flex;
+justify-content: center;
+align-items: center;
+border: solid 2px black;
+margin-bottom: 30px;
+margin-left: 400px;
+margin-right: 400px;
+font-size: 15pt;
+border-radius: 5px;
+background-color:cornflowerblue;
+}
