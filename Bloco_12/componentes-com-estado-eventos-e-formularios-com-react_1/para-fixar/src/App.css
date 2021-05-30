@@ -1,0 +1,12 @@
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 200px;
+}
+.button {
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: large;
+  background-color: coral;
+}
