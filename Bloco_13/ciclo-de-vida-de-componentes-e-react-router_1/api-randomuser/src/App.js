@@ -1,5 +1,6 @@
 import React from 'react';
 import Persons from './Persons';
+import Loading from './Loading';
 import './App.css';
 
 class App extends React.Component {
@@ -8,6 +9,7 @@ class App extends React.Component {
     
     this.state = {
       users: [],
+      loading: true,
     }
 
     this.fetchRandoMuser = this.fetchRandoMuser.bind(this);
@@ -18,8 +20,19 @@ class App extends React.Component {
     fetch('https:api.randomuser.me/')
     .then((response) => response.json())
     .then((data) => {
-      this.setState({ users: data.results })
+      this.setState({ 
+        users: data.results,
+        loading: false, 
+      })
     });
+  }
+
+  shouldComponentUpdate(_nextProps, nextState) {
+    const idade = 50;
+    if (nextState.users[0].dob.age > idade) {
+      return false;
+    }
+    return true;
   }
 
   componentDidMount(){
@@ -30,22 +43,25 @@ class App extends React.Component {
     return {
       name: `${user.name.first} ${user.name.last}`,
       email: user.email,
-      age: user.age,
+      age: user.dob.age,
       image: user.picture.thumbnail,
     };
   }
+
   render() {
 
-    const { users } = this.state;
+    const { users, loading } = this.state;
+
+    if(loading) return <Loading />
 
     return (
       <div className='App'>
         <h1>
-          Api Rando Muser by React
+          Api Random User by React
         </h1>
           <div>
             {users.map((user, index) => (
-              <Persons key={ index } users={ this.getUserInfo(user) } />))} 
+              <Persons key={ index } users={ this.getUserInfo(user) } />))}
           </div>
       </div>
       );
