@@ -14,9 +14,11 @@ class App extends React.Component {
       dropdown: '',
       default: 'Deixe sua opinião aqui',
       news: false,
-      formularioComErros: true,
+      formularioComErros: false,
     }
   this.handlerGenerico = this.handlerGenerico.bind(this)
+  this.checkInputs = this.checkInputs.bind(this)
+  
   }
 
   handlerGenerico({ target }) {
@@ -27,9 +29,42 @@ class App extends React.Component {
   this.setState({
     [name]: value
   })
+  this.checkInputs(name, value);
+  }
+
+  formWithErrors = (bool) => { this.setState({ formularioComErros: bool })};
+
+  checkInputs(name, value) {
+    const { formWithErrors } = this;
+
+    switch(name) {
+      case 'nome':
+        const nomeInvalido = !(value.length >= 3);
+        formWithErrors(nomeInvalido);
+        break;
+      case 'email':
+        const emailInvalido = !(value.includes('@'));
+        formWithErrors(emailInvalido);
+        break;
+      case 'textarea':
+        const textareaInvalido = !(value.length > 0);
+        formWithErrors(textareaInvalido);
+        break;
+      case 'dropdown':
+        const dropDown = !(value.length > 0);
+        formWithErrors(dropDown);
+        break;
+      case 'news':
+        formWithErrors(!value);
+        break;
+      default:
+        console.error('Formulário com erro de preenchimento');
+        break;
+    }
   }
 
   render() {
+    const { formWithErrors } = this.state;
     return (
     <div className='divMae'>
       <div className='paragrafo'>
@@ -88,6 +123,7 @@ class App extends React.Component {
                   <button type='submit'>Enviar</button>
             </div>  
         </form>
+        { formWithErrors && 'Formulário Inválido' }
     </div>
     );
   }
