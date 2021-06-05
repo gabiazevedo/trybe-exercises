@@ -44,7 +44,7 @@ class App extends React.Component {
       name: `${user.name.first} ${user.name.last}`,
       email: user.email,
       age: user.dob.age,
-      image: user.picture.thumbnail,
+      image: user.picture.large,
     };
   }
 
@@ -59,7 +59,7 @@ class App extends React.Component {
         <h1>
           Api Random User by React
         </h1>
-          <div>
+          <div className='title'>
             {users.map((user, index) => (
               <Persons key={ index } users={ this.getUserInfo(user) } />))}
           </div>
