@@ -1,0 +1,71 @@
+.divMae {
+  display: flex;
+  flex-wrap: wrap;
+  border: solid 1px black;
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.paragrafo {
+  display: flex;
+  margin-left: 408px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.paragrafo h1 {
+  margin-bottom: 0px;
+  font-size: 25pt;
+}
+
+.form {
+  margin-top: 30px;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.nome {
+  margin-left: 10px;
+}
+
+.email {
+  margin-left: 10px;
+}
+
+.fieldset1 {
+  margin-bottom: 30px;
+  height: 40px;
+}
+
+.fieldset2 {
+  margin-bottom: 30px;
+  height: 150px;
+}
+
+.fieldset3 {
+  margin-bottom: 30px;
+  height: 50px;
+}
+
+.finalForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.select {
+  display: flex;
+  margin-top: 15px;
+}
+
+.dropdown {
+  margin-left: 10px;
+}
