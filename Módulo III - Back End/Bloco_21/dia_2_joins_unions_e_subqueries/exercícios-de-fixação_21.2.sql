@@ -163,3 +163,41 @@ UNION ALL
 (SELECT first_name, last_name FROM sakila.actor LIMIT 60)
 ORDER BY first_name, last_name
 LIMIT 15 OFFSET 45;
+
+-- 1. Usando o EXISTS na tabela books_lent e books , exiba o id e título dos livros que ainda não foram emprestados.
+
+SELECT id, title FROM hotel.Books AS b
+WHERE NOT EXISTS (
+  SELECT * FROM hotel.Books_Lent
+  WHERE b.id = book_id
+  );
+
+-- 2. Usando o EXISTS na tabela books_lent e books , exiba o id e título dos livros estão atualmente emprestados e que
+  -- contêm a palavra "lost" no título.
+
+SELECT id, title FROM hotel.Books AS b
+WHERE EXISTS (
+  SELECT * FROM hotel.Books_Lent
+  WHERE b.id = book_id AND b.title LIKE '%lost%'
+);
+
+-- 3. Usando a tabela carsales e customers , exiba apenas o nome dos clientes que ainda não compraram um carro.
+
+SELECT `Name` FROM hotel.Customers AS c
+WHERE NOT EXISTS (
+  SELECT * FROM hotel.CarSales
+  WHERE c.CustomerId = CustomerID
+);
+
+-- 4. Usando o comando EXISTS em conjunto com JOIN e as tabelas cars , customers e carsales , exiba o nome do cliente
+  -- e o modelo do carro de todos os clientes que fizeram compras de carros.
+
+SELECT cu.Name, ca.Name
+FROM hotel.Customers AS cu
+INNER JOIN hotel.Cars AS ca
+WHERE EXISTS (
+  SELECT * FROM hotel.CarSales
+  WHERE CustomerID = cu.CustomerId AND
+  ca.Id = CarID
+);
+
