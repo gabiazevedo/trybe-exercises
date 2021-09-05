@@ -82,7 +82,32 @@ WHERE NOT EXISTS (
 -- Exercício 10: Utilizando o INNER JOIN , selecione todas as informações dos filmes com avaliação maior que 8 e que
   -- estejam em cartaz.
 
+SELECT m.id, m.title, m.director, m.year, m.length_minutes, m.theater_id
+FROM Pixar.Movies AS m
+INNER JOIN Pixar.BoxOffice AS bo
+ON m.id = bo.movie_id
+INNER JOIN Pixar.Theater AS t
+ON m.theater_id = t.id
+WHERE bo.rating > 8;
+
 -- Exercício 11: Utilizando o SELF JOIN , selecione os títulos e duração dos filmes que possuem o mesmo diretor.
+
+SELECT t1.title, t1.title, t2.title, t2.length_minutes
+FROM Pixar.Movies AS t1, Pixar.Movies AS t2
+WHERE t1.director = t2.director
+AND t1.title != t2.title;
 
 -- Exercício 12: Faça duas buscas, uma utilizando SUBQUERY e outra utilizando INNER JOIN , que retornem o título dos
   -- filmes que arrecadaram 500 milhões ou mais, e que possuem duração maior que 110 minutos.
+
+-- USANDO INNER JOIN
+SELECT m.title FROM Pixar.Movies AS m
+INNER JOIN Pixar.BoxOffice AS bo
+ON m.id = bo.movie_id
+WHERE bo.international_sales >=500000000 AND m.length_minutes > 110;
+
+-- USANDO SUBQUERIE
+SELECT m.title FROM Pixar.Movies AS m
+WHERE m.id IN (
+  SELECT bo.movie_id FROM Pixar.BoxOffice AS bo
+  WHERE bo.international_sales >=500000000) AND m.length_minutes > 110;
