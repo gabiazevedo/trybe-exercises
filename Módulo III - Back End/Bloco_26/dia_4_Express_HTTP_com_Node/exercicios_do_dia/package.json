@@ -1,12 +1,12 @@
 {
-  "name": "exercicios_fixacao",
+  "name": "exercicios_do_dia",
   "version": "1.0.0",
   "description": "",
-  "main": "recipes.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "recipes": "nodemon recipes.js",
-    "drinks": "nodemon drinks.js"
+    "exercicios": "nodemon exercícios.js",
+    "simpsons": "nodemon simpsons.js"
   },
   "keywords": [],
   "author": "",

@@ -15,6 +15,12 @@ app.get('/recipes', function (req, res) {
   }));
 });
 
+app.post('/recipes', function (req, res) {
+  const { id, name, price, waitTime } = req.body;
+  recipes.push({ id, name, price, waitTime });
+  res.status(201).json({ message: 'Recipe created successfully!'});
+});
+
 app.get('/recipes/search', function (req, res) {
   const { name, maxPrice, minPrice } = req.query;
   const filteredRecipes = recipes.filter((r) => r.name.includes(name)

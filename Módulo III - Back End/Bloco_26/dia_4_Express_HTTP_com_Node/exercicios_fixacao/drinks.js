@@ -1,5 +1,7 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
+app.use(bodyParser.json());
 
 const drinks = [
   { id: 1, name: 'Refrigerante Lata', price: 5.0 },
@@ -21,6 +23,13 @@ app.get('/drinks/search', (req, res) => {
   res.status(200).json(filteredDrinks);
 });
 
+app.post('/drinks', (req, res) => {
+  const { id, name, price } = req.body;
+  drinks.push({ id, name, price });
+
+  res.status(201).json({ message: 'Drink created successfully!!!' });
+});
+
 app.get('/drinks', (req, res) => {
   res.json(drinks.sort(function (a, b) {
     if (a.name < b.name) return -1;
@@ -36,6 +45,32 @@ app.get('/drinks/:id', (req, res) => {
   if(!drink) return res.status(404).json('Drink not found!!!');
 
   res.status(200).json(drink);
+});
+
+app.put('/drinks/:id',  (req, res) => {
+  const { id } = req.params;
+  const { name, price } = req.body;
+
+  const editDrinks = drinks.find((d) => d.id === parseInt(id));
+  if(editDrinks === -1) {
+    return res.status(404).json({ message: 'Drink not found' });
+  };
+
+  drinks[editDrinks] = { ...drinks[editDrinks], name, price };
+  res.status(204).end();
+});
+
+app.delete('/drinks/:id', (req, res) => {
+  const { id } = req.params;
+
+  const deleteDrink = drinks.find((d) => d.id === parseInt(id));
+
+  if(deleteDrink === -1) {
+    return res.status(404).json({ message: 'Drink not found' });
+  }
+  
+  drinks.splice(deleteDrink, 1);
+  res.status(204).end();
 });
 
 app.listen(3000, () => {
