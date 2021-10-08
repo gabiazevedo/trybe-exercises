@@ -1,0 +1,12 @@
+{
+  "name": "dia_2_nodejs_fluxos_assincronos",
+  "version": "1.0.0",
+  "description": "Meus primeiros scripts assíncronos - (2021-09-24)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "exercicio1": "node exercicio1.js"
+  },
+  "author": "Gabriela Azevedo",
+  "license": "ISC"
+}

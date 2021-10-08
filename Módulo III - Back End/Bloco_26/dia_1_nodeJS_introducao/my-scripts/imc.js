@@ -1,6 +1,3 @@
-const PESO_KG = 52;
-const ALTURA_CM = 155;
-
 function calculoIMC() {
 
   const peso = PESO_KG;
