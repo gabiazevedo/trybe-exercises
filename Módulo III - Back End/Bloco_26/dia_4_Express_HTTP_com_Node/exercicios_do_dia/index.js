@@ -1,10 +1,14 @@
 const express = require('express');
 const rescue = require('express-rescue');
 const { readSimpsons, writeSimpsons } = require('./functionsAsync');
+const crypto = require('crypto');
 const bodyParser = require('body-parser');
+const token = require('./generateToken');
+const validateToken = require('./authMiddleware');
 const app = express();
 
 app.use(bodyParser.json());
+app.use(validateToken);
 
 app.get('/ping', (_req, res) => {
   res.status(200).json({ message: 'pong' });
@@ -56,7 +60,22 @@ app.post('/simpsons/:id', rescue(async (req, res) => {
   simpsons.push({ id, name });
   await writeSimpsons(simpsons);
   res.status(204).end();
-}))
+}));
+
+
+
+
+app.post('/signup', (req, res) => {
+  const { email, password, firstName, phone } = req.body;
+
+  if ([email, password, firstName, phone].includes(undefined)) {
+    return res.status(401).json({ message: 'missing fields' });
+  }
+
+  const token = crypto.randomBytes(8).toString('hex');
+
+  res.status(200).json({ token });
+})
 
 app.use((err, _req, res, _next) => {
   res.status(500).send(`Algo deu errado ${err.message}`);
