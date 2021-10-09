@@ -39,7 +39,7 @@ const writeFile = require('./index');
 
 const fs = require('fs');
 
-const sinon = require('sinon');
+const sinon = require('sinon'); 
 
 describe('Executa a função "escreveArquivo"', () => {
   before(() => {
