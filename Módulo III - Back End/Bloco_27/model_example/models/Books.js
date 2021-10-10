@@ -17,15 +17,11 @@ const getAllBooks = async () => {
 }
 
 // Busca livros por Author;
-const getBooksById = async (authorId) => {
+const getBooksById = async (author_id) => {
   const [booksById] = await connection.execute(
-    'SELECT * FROM model_example.books WHERE author_id=?;', [authorId]
+    'SELECT * FROM model_example.books WHERE author_id=?;', [author_id]
   );
-  return booksById.map(({ id, title, author_id }) => ({
-    id,
-    title,
-    authorId: author_id,
-  }));
+  return booksById;
 }
 
 // Busca livros por Id via parâmetro;
@@ -39,6 +35,21 @@ const findBookById = async (id) => {
   return booksFound.map(serializeBooks)[0];
 };
 
+const bookIsValid = (title, author_id) => {
+  if (!title || title.length === '') return false;
+  if (title.length < 3) return false;
+  if (!author_id || author_id === '') return false;
+  return true;
+};
+
+const createNewBook = async (title, author_id) => {
+  const newBook = await connection.execute(
+    'INSERT INTO model_example.books (title, author_id) VALUES (?,?);',
+    [title, author_id],
+    );
+    return newBook;
+}
+
 module.exports = {
-    getAllBooks, getBooksById, findBookById,
+    getAllBooks, getBooksById, findBookById, bookIsValid, createNewBook,
 };
