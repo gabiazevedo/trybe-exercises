@@ -1,4 +1,5 @@
 const mongoConnection = require('./connection');
+const { ObjectId } = require('mongodb');
 
 const getAll = async () => {
   const moviesCollection = await mongoConnection.getConnection()
@@ -29,7 +30,31 @@ const create = async ({ title, directedBy, releaseYear }) => {
   };
 };
 
+const findMovieById = async (id) => {
+  const moviesCollection = await mongoConnection.getConnection()
+    .then((db) => db.collection('movies'));
+
+  const movie = await moviesCollection
+    .findOne({ _id: ObjectId(id) })
+
+  if (!movie) return null;
+
+  const {
+    title,
+    directedBy,
+    releaseYear
+  } = movie
+
+  return {
+    id,
+    title,
+    directedBy,
+    releaseYear
+  }
+};
+
 module.exports = {
   create,
   getAll,
+  findMovieById,
 };
