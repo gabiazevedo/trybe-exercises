@@ -2,6 +2,7 @@ const Joi = require('joi');
 const jwt = require('jsonwebtoken');
 
 const { SECRET } = process.env;
+
 const validateBody = (body) =>
  Joi.object({
    username: Joi.string().min(5).alphanum().required(),
@@ -14,7 +15,6 @@ module.exports = async (req, res, next) => {
   if (error) return next(error);
 
   if (req.body.username === 'admin' && req.body.password !== 's3nh4S3gur4???') {
-
     const err = new Error('Invalid username or password');
 
     err.statusCode = 401;

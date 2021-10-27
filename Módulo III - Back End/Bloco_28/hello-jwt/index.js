@@ -1,7 +1,6 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const bodyParser = require('body-parser');
 
 const { PORT } = process.env;
 
@@ -16,14 +15,20 @@ app.use(
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Authorization'],
   }),
-);
+  );
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-
+app.use(express.json());
+  
 app.post('/login', controllers.login);
 
+app.get('/users/me', middlewares.auth, controllers.me);
+
 app.get('/ping', controllers.ping);
+
+app.get('/topSecret',
+  middlewares.auth,
+  middlewares.admin,
+  controllers.topSecret);
 
 app.use(middlewares.error);
 
