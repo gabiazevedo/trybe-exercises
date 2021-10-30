@@ -1,3 +1,5 @@
+# Trybe Exercises 🚀 
+
 Este repositório contém todas as atividades de aprendizagem desenvolvidas por _[Gabriela Azevedo](https://www.linkedin.com/in/gabiazevedoms/)_ durante os estudos na [Trybe](https://www.betrybe.com/) :rocket:
 
 _"A escola que te ensina a programar, a aprender e a trabalhar."_
@@ -124,7 +126,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 ##### Bloco 17: Projeto React
 
-- [x] 17-1: _[Projeto - Jogo de Trivia]()_
+- [x] 17-1: _Projeto - Jogo de Trivia_
 
 ##### Bloco 18: React & Context API
 
@@ -135,7 +137,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 ##### Bloco 19: Projeto Final de Front-end
 
-- [x] 19-1: _[Projeto - App de Receitas]()_
+- [x] 19-1: _[Projeto - App de Receitas](https://github.com/gabiazevedo/App_de_Receitas)_
 
 ## Desenvolvimento Back-end :hourglass_flowing_sand:
 
@@ -145,40 +147,40 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [x] 20-2: _Encontrando dados em um banco de dados_
 - [x] 20-3: _Filtrando dados de forma específica_
 - [x] 20-4: _Manipulando tabelas_
-- [x] 20-5: _[Projeto - All For One]()_
+- [x] 20-5: _Projeto - All For One_
 
 ##### Bloco 21: Bancos de dados relacionais
 
 - [x] 21-1: _Funções mais usadas no SQL_
 - [x] 21-2: _Descomplicando JOINs e UNIONs_
 - [x] 21-3: _Stored Routines & Subqueries_
-- [x] 21-4: _[Projeto - Vocabulary Booster]()_
+- [x] 21-4: _Projeto - Vocabulary Booster_
 
 ##### Bloco 22: Bancos de dados relacionais
 
 - [x] 22-1: _Transformando ideias em um modelo de banco de dados_
 - [x] 22-2: _Normalização, Formas Normais e Dumps_
 - [x] 22-2: _Transformando ideias em um modelo de banco de dados - Parte 2_
-- [x] 22-3: _[Projeto - One For All]()_
+- [x] 22-3: _Projeto - One For All_
 
 ##### Bloco 23: Introdução - NoSQL
 
 - [x] 23-1: _MongoDB - Introdução_
 - [x] 23-2: _Filter Operators_
-- [x] 23-3: _[Projeto - Data Flights]()_
+- [x] 23-3: _Projeto - Data Flights_
 
 ##### Bloco 24: Updates
 
 - [x] 24-1: _Updates Simples_
 - [x] 24-2: _Updates Complexos - Arrays - Parte 1_
 - [x] 24-3: _Updates Complexos - Arrays - Parte 2_
-- [x] 24-4: _[Projeto - Commerce]()_
+- [x] 24-4: _Projeto - Commerce_
 
 ##### Bloco 25: Aggregation Framework
 
 - [x] 25-1: _Aggregation Framework - Part 1_
 - [x] 25-2: _Aggregation Framework - Part 2_
-- [x] 25-3: _[Projeto - Aggregations]()_
+- [x] 25-3: _Projeto - Aggregations_
 
 ##### Bloco 26: Intro - NodeJS
 
@@ -187,35 +189,35 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [x] 26-3: _NodeJS - Testes com NodeJS
 - [x] 26-4: _NodeJS - Express: HTTP com Node.js
 - [x] 26-5: _NodeJS - Express: Middlewares
-- [x] 26-6: _[Talk Manager]()_
+- [x] 26-6: _Talk Manager_
 
 ##### Bloco 27: NodeJS
 
 - [x] 27-1: _Express: HTTP com Node.js_
 - [x] 27-2: _Arquitetura de Software - Introdução ao MVC_
-- [x] 27-3: _[Projeto - Cookmaster]()_
+- [x] 27-3: _Projeto - Cookmaster_
 
 ##### Bloco 28: NodeJS
 
 - [x] 28-1: _Arquitetura de Software - Camada de Serviço_
 - [x] 28-2: _Arquitetura web - Rest e Restful_
-- [x] 28-3: _[Projeto - Store Manager]()_
+- [x] 28-3: _Projeto - Store Manager_
 
 ##### Bloco 29: NodeJS
 
 - [x] 29-1: _NodeJS - JWT - (JSON Web Token)_
 - [x] 29-2: _NodeJS - Upload de arquivos com Multer_
-- [x] 29-3: _[Projeto - Cookmaster V2]()_
+- [x] 29-3: _Projeto - Cookmaster V2_
 
 ##### Bloco 30: Introdução - Deploy
 
 - [ ] 30-1: _Infraestrutura - Deploy com Heroku_
 - [ ] 30-2: _Deploy - Gerenciadores de Processos_
-- [ ] 30-3: _[Projeto - Stranger Things]()_
+- [ ] 30-3: _Projeto - Stranger Things_
 
 ##### Bloco 31: Projeto
 
-- [ ] 31-1: _[Projeto - Trybeer]()_
+- [ ] 31-1: _Projeto - Trybeer_
 
 ##### Bloco 32: Arquitetura de Software
 
@@ -223,17 +225,17 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [ ] 32-2: _ORM - Interface da aplicação com o banco de dados_
 - [ ] 32-3: _Arquitetura de Software - DDD_
 - [ ] 32-4: _Boas práticas na escrita de testes_
-- [ ] 32-3: _[Projeto - API de Blogs]()_
+- [ ] 32-3: _Projeto - API de Blogs_
 
 ##### Bloco 33: Sockets
 
 - [ ] 30-1: _Sockets - TCP/UDP & NET_
 - [ ] 30-2: _Sockets - Socket.io_
-- [ ] 30-3: _[Projeto - Webchat]()_
+- [ ] 30-3: _Projeto - Webchat_
 
 ##### Bloco 34: Projeto
 
-- [ ] 34-1: _[Projeto - Trybeer V2]()_
+- [ ] 34-1: _Projeto - Trybeer V2_
 
 ## Ciência da Computação :hourglass_flowing_sand:
 
@@ -242,13 +244,13 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [ ] 35-1: _Arquitetura de Computadores_
 - [ ] 35-2: _Arquitetura de redes_
 - [ ] 35-3: _Redes de computadores, ferramentas e segurança_
-- [ ] 35-4: _[Projeto - Explorando os protocolos]()_
+- [ ] 35-4: _Projeto - Explorando os protocolos_
 
 ##### Bloco 36: Python
 
-- [ ] 35-1: _Aprendendo Python_
-- [ ] 35-2: _Testes e Exceções_
-- [ ] 35-3: _Entrada e Saída de dados_
+- [ ] 36-1: _Aprendendo Python_
+- [ ] 36-2: _Testes e Exceções_
+- [ ] 36-3: _Entrada e Saída de dados_
 - [ ] 36-4: _Entrada e Saída de dados_
-- [ ] 35-5: _[Projeto - Tech news]()_
+- [ ] 36-5: _Projeto - Tech news_
 
