@@ -14,14 +14,19 @@ module.exports = {
         type: Sequelize.STRING,
         field: 'first_name',
       },
+      lastName: {
+        allowNull: false,
+        type: Sequelize.STRING,
+        field: 'last_name',
+      },
       age: {
         allowNull: false,
         type: Sequelize.INTEGER,
       },
-    })
+    });
   },
 
-  down: async (queryInterface, Sequelize) => {
+  down: async (queryInterface, _Sequelize) => {
     return queryInterface.dropTable('Employees');
   },
 };
