@@ -1,15 +1,10 @@
-PI = 3.14  # PI é uma "constante" em nosso módulo
-
-def square(side):
-    '''Calculate area of square.'''
-    return side * side
+# Crie uma função que receba dois números e retorne o maior deles.
 
 
-def rectangle(length, width):
-    '''Calculate area of rectangle.'''
-    return length * width
+def bigger(first_number, second_number):
+    if first_number > second_number:
+        return first_number
+    return second_number
 
 
-def circle(radius):
-    '''Calculate area of circle.'''
-    return PI * radius * radius
+print(bigger(2, 5))
